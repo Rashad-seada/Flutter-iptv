@@ -6,7 +6,7 @@ import '../../config/app_theme.dart';
 
 class CustomProgressIndicator extends StatelessWidget {
   Color color;
-  CustomProgressIndicator({super.key,this.color = AppTheme.primary900});
+  CustomProgressIndicator({super.key,this.color = AppTheme.primary});
 
   @override
   Widget build(BuildContext context) {

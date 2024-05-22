@@ -1,4 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sizer/sizer.dart';
@@ -20,6 +21,29 @@ class OnBoardingScreen extends StatelessWidget {
         body: Stack(
           alignment: Alignment.bottomCenter,
           children: [
+
+            Positioned(
+              right: 7.w,
+              top: 4.h,
+              child: Row(
+                mainAxisSize: MainAxisSize.max,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "HULK",
+                    style: AppTheme.mainTextStyle(
+                        color: AppTheme.neutral100, fontSize: 20.sp),
+                  ),
+
+                  Text(
+                    " IPTV",
+                    style: AppTheme.mainTextStyle(
+                        color: AppTheme.primary, fontSize: 12.sp),
+                  )
+                ],
+              ),
+            ),
 
             SizedBox(
               child: PageView(
@@ -64,20 +88,20 @@ class OnBoardingScreen extends StatelessWidget {
             ),
 
             Positioned(
-              bottom: 14.h,
+              bottom: 17.h,
               child: BlocConsumer<OnBoardingCubit, OnBoardingState>(
                 listener: (context, state) {
                   // TODO: implement listener
                 },
                 builder: (context, state) {
                   return MainButton(
-                    color: AppTheme.primary900,
+                    color: AppTheme.primary,
                     width: 86.w,
-                    height: 7.h,
+                    height: 6.h,
                     label: Text(
                       LocaleKeys.next,
                       style: AppTheme.mainTextStyle(
-                          color: AppTheme.neutral100, fontSize: 15.sp),
+                          color: AppTheme.neutral100, fontSize: 12.sp),
                     ).tr(),
                     onTap: ()=> context.read<OnBoardingCubit>().onNextClick(context),
                   );
@@ -86,13 +110,13 @@ class OnBoardingScreen extends StatelessWidget {
             ),
 
             Positioned(
-              bottom: 7.h,
+              bottom: 10.h,
               child: GestureDetector(
                 onTap: ()=> context.read<OnBoardingCubit>().onSkipCLick(context),
                 child: Text(
                   LocaleKeys.skip,
                   style: AppTheme.mainTextStyle(
-                      color: AppTheme.neutral700, fontSize: 15.sp),
+                      color: AppTheme.neutral500, fontSize: 15.sp),
                 ).tr(),
               ),
             )

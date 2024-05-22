@@ -110,7 +110,7 @@ class _OtpScreenState extends State<OtpScreen> {
                   child: Text(
                     LocaleKeys.resend.tr(),
                     style: AppTheme.mainTextStyle(
-                        color: AppTheme.primary900, fontSize: 12.sp),
+                        color: AppTheme.primary, fontSize: 12.sp),
                   ).tr(),
                 ),
 
@@ -125,7 +125,7 @@ class _OtpScreenState extends State<OtpScreen> {
               listener: (context, state) {},
               builder: (context, state) {
                 return MainButton(
-                  color: AppTheme.primary900,
+                  color: AppTheme.primary,
                   width: 86.w,
                   height: 6.5.h,
                   label: (state is OtpLoading)? CustomProgressIndicator(

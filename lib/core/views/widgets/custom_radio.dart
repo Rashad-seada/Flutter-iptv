@@ -11,7 +11,7 @@ class CustomRadio extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Radio<String>(
-      activeColor: AppTheme.primary900,
+      activeColor: AppTheme.primary,
 
       value: value, groupValue: groupValue, onChanged: onChanged,);
   }

@@ -20,8 +20,7 @@ import '../../../../../core/errors/failure.dart';
 import '../../../../../core/utils/worker.dart';
 import '../../../../../core/views/widgets/custom_flush_bar.dart';
 import '../../../../../generated/locale_keys.g.dart';
-import '../../../../home/views/screens/06_home_screen.dart';
-import '../../../../seller/seller_home/views/screens/seller_home_screen.dart';
+
 
 part 'register_state.dart';
 
@@ -67,9 +66,9 @@ class RegisterCubit extends Cubit<RegisterState> {
     return getIt<ValidatePasswordUseCase>().call(passwordController.text);
   }
 
-  onRegisterClick(BuildContext context,RegisterType registerType) {
+  onRegisterClick(BuildContext context) {
     if(formKey.currentState!.validate()){
-      _register(context,registerType);
+      _registerCustomer(context);
     }
   }
 
@@ -101,19 +100,6 @@ class RegisterCubit extends Cubit<RegisterState> {
     return formatedPhoneNumber;
   }
 
-  _register(BuildContext context,RegisterType registerType){
-    switch (registerType){
-
-      case RegisterType.RegisterCustomer:
-        print('1');
-        _registerCustomer(context);
-
-      case RegisterType.RegisterSeller :
-        print('2');
-
-        _registerSeller(context);
-    }
-  }
 
   _registerSeller(BuildContext context) {
     if(file == null){
@@ -183,7 +169,7 @@ class RegisterCubit extends Cubit<RegisterState> {
   }
 
   _navigateToLoginScreen(BuildContext context) {
-    Navigator.push(
+    Navigator.pushReplacement(
         context, MaterialPageRoute(builder: (_) => const LoginScreen()));
   }
 
@@ -205,12 +191,12 @@ class RegisterCubit extends Cubit<RegisterState> {
   }
 
   _navigateToHomeScreen(BuildContext context){
-    Navigator.push(context,MaterialPageRoute(builder: (_)=> const HomeScreen()));
+    //Navigator.push(context,MaterialPageRoute(builder: (_)=> const HomeScreen()));
   }
 
   _navigateToSellerHomeScreen(BuildContext context) {
-    Navigator.push(
-        context, MaterialPageRoute(builder: (_) => SellerHomeScreen()));
+    // Navigator.push(
+    //     context, MaterialPageRoute(builder: (_) => SellerHomeScreen()));
 
     _navigateToOtpScreen(BuildContext context) {
       Navigator.push(

@@ -39,7 +39,7 @@ class ResetPasswordScreen extends StatelessWidget {
             Text(
               LocaleKeys.reset_password,
               style: AppTheme.mainTextStyle(
-                color: AppTheme.neutral900,
+                color: AppTheme.neutral300,
                 fontSize: 25.sp,
               ),
             ).tr(),
@@ -53,11 +53,11 @@ class ResetPasswordScreen extends StatelessWidget {
             Text(
               LocaleKeys.reset_password_sub_text,
               style: AppTheme.mainTextStyle(
-                  color: AppTheme.neutral900, fontSize: 12.sp),
+                  color: AppTheme.neutral500, fontSize: 12.sp),
             ).tr(),
 
             Space(
-              height: 3.h,
+              height: 4.h,
             ),
 
             Text(
@@ -91,7 +91,7 @@ class ResetPasswordScreen extends StatelessWidget {
             ),
 
             MainButton(
-              color: AppTheme.primary900,
+              color: AppTheme.primary,
               width: 86.w,
               height: 6.5.h,
               label: Text(

@@ -25,7 +25,12 @@ abstract class AppTheme {
   static const Color neutral200 = Color(0xffE5E7EB);
   static const Color neutral100 = Color(0xffF4F4F5);
 
-  static const Color primary900 = Color(0xff981B20);
+  static const Color primary = Color(0xff896bba);
+  static const Color secondary = Color(0xff10131c);
+  static const Color tritory = Color(0xff242424);
+
+
+
   static const Color primary800 = Color(0xffE61E29);
   static const Color primary700 = Color(0xffE93842);
   static const Color primary600 = Color(0xffEB5058);
@@ -38,7 +43,7 @@ abstract class AppTheme {
   static const Color success = Color(0xff60c631);
   static const Color error = Color(0xffff472b);
 
-  static const Color backgroundColor = Color(0xffFFFFFF);
+  static const Color backgroundColor = Color(0xff10131c);
 
   static const Color green = Color(0xff9dd165);
   static const Color yellow = Color(0xfffac44b);
@@ -56,7 +61,7 @@ abstract class AppTheme {
 
 
   static ThemeData theme(BuildContext context) => ThemeData(
-    primaryColor: primary900,  // Primary color for your app
+    primaryColor: primary,  // Primary color for your app
     hintColor: neutral300,  // Accent color used for buttons, etc.
 
     scaffoldBackgroundColor: backgroundColor,
@@ -64,7 +69,7 @@ abstract class AppTheme {
     // Button theme
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        backgroundColor: primary900,  // Default button color
+        backgroundColor: primary,  // Default button color
       ),
     ),
 
@@ -73,7 +78,7 @@ abstract class AppTheme {
     inputDecorationTheme: const InputDecorationTheme(
       border: OutlineInputBorder(),
       focusedBorder: OutlineInputBorder(
-        borderSide: BorderSide(color: primary900),
+        borderSide: BorderSide(color: primary),
       ),
     ),
 

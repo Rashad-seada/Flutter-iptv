@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:sizer/sizer.dart';
 
-import '../../../features/cart/views/screens/14_cart_screen.dart';
 import '../../config/app_images.dart';
 import '../../config/app_theme.dart';
 
@@ -17,7 +16,7 @@ class CustomHeader extends StatelessWidget {
   }
 
   navigateToCart(BuildContext context){
-    Navigator.push(context,MaterialPageRoute(builder: (_)=> CartScreen()));
+    //Navigator.push(context,MaterialPageRoute(builder: (_)=> CartScreen()));
   }
 
   @override

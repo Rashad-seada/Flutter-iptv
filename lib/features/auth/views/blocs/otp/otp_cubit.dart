@@ -8,7 +8,6 @@ import 'package:smart_soft/features/auth/domain/usecases/confirm_otp_use_case.da
 import '../../../../../core/di/app_module.dart';
 import '../../../../../core/errors/failure.dart';
 import '../../../../../core/views/widgets/custom_flush_bar.dart';
-import '../../../../home/views/screens/06_home_screen.dart';
 import '../../../domain/usecases/send_otp_use_case.dart';
 
 part 'otp_state.dart';
@@ -87,7 +86,7 @@ class OtpCubit extends Cubit<OtpState> {
   }
 
   navigateToHomeScreen(BuildContext context){
-    Navigator.push(context,MaterialPageRoute(builder: (_)=> const HomeScreen()));
+    //Navigator.push(context,MaterialPageRoute(builder: (_)=> const HomeScreen()));
   }
 
 

@@ -29,23 +29,23 @@ class OnBoardingPage extends StatelessWidget {
 
           children: [
             Space(
-              height: 14.h,
+              height: 12.h,
             ),
             Center(
               child: Center(
-                  child: SvgPicture.asset(
+                  child: Image.asset(
                     image,
                     width: 86.w,
-                    height: 23.h,
+                    height: 30.h,
                   )),
             ),
             Space(
-              height: 16.h,
+              height: 10.h,
             ),
             Center(
               child: Text(
                 title,
-                style: AppTheme.mainTextStyle(color: AppTheme.neutral900,fontSize: 20.sp,),
+                style: AppTheme.mainTextStyle(color: AppTheme.neutral300,fontSize: 20.sp,),
                 textAlign: TextAlign.center,
               ).tr(),
             ),
@@ -55,7 +55,7 @@ class OnBoardingPage extends StatelessWidget {
             Center(
               child: Text(
                 description,
-                style: AppTheme.mainTextStyle(color: AppTheme.neutral700,fontSize: 12.sp),
+                style: AppTheme.mainTextStyle(color: AppTheme.neutral500,fontSize: 12.sp),
                 textAlign: TextAlign.center,
               ).tr(),
             )

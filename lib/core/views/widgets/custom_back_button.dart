@@ -26,19 +26,40 @@ class CustomBackButton extends StatelessWidget {
               Navigator.pop(context);
             },
             child: Container(
-              padding: EdgeInsets.all(2.w),
+              padding: EdgeInsets.all(3.w),
               alignment: Alignment.center,
               decoration: const BoxDecoration(
-                color: AppTheme.neutral200,
+                color: AppTheme.neutral900,
                 shape: BoxShape.circle
               ),
               child: SvgPicture.asset(AppImages.arrow,
                 width: 6.w
                 ,height: 6.w,
+                color: AppTheme.neutral100,
               ),
             )
         ),
 
+        Center(
+          child: Row(
+            mainAxisSize: MainAxisSize.max,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "HULK",
+                style: AppTheme.mainTextStyle(
+                    color: AppTheme.neutral100, fontSize: 18.sp),
+              ).tr(),
+
+              Text(
+                " iptv",
+                style: AppTheme.mainTextStyle(
+                    color: AppTheme.primary, fontSize: 13.sp),
+              ).tr()
+            ],
+          ),
+        ),
 
       ],
     );

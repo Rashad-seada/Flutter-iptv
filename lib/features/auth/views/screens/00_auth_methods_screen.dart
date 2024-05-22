@@ -1,6 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:sizer/sizer.dart';
 import 'package:smart_soft/core/config/app_images.dart';
 import 'package:smart_soft/core/views/widgets/custom_divider.dart';
@@ -12,7 +11,6 @@ import 'package:smart_soft/generated/locale_keys.g.dart';
 
 import '../../../../core/config/app_theme.dart';
 import '../../../../core/views/widgets/main_button.dart';
-import '../../../admin/admin_home/views/screens/admin_home_screen.dart';
 
 class AuthMethodsScreen extends StatelessWidget {
   const AuthMethodsScreen({Key? key}) : super(key: key);
@@ -22,21 +20,22 @@ class AuthMethodsScreen extends StatelessWidget {
   }
 
   void navigateToRegisterCustomerScreen(BuildContext context){
-    Navigator.push(context, MaterialPageRoute(builder: (_)=> RegisterScreen(registerType: RegisterType.RegisterCustomer,)));
+    Navigator.push(context, MaterialPageRoute(builder: (_)=> RegisterScreen()));
   }
 
   void navigateToRegisterSellerScreen(BuildContext context){
-    Navigator.push(context, MaterialPageRoute(builder: (_)=> RegisterScreen(registerType: RegisterType.RegisterSeller,)));
+    Navigator.push(context, MaterialPageRoute(builder: (_)=> RegisterScreen()));
   }
 
   void navigateToRegisterAdminScreen(BuildContext context){
-    Navigator.push(context, MaterialPageRoute(builder: (_)=> AdminHomeScreen()));
+    //Navigator.push(context, MaterialPageRoute(builder: (_)=> AdminHomeScreen()));
   }
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
+
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 7.w),
         child: Column(
@@ -45,25 +44,40 @@ class AuthMethodsScreen extends StatelessWidget {
           children: [
 
             Space(
-              height: 4.h,
+              height: 15.h,
             ),
 
             Center(
-              child: Image.asset(
-                AppImages.authMethods,
-                width: 86.w,
-                height: 23.h,
+              child: Row(
+                mainAxisSize: MainAxisSize.max,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "HULK",
+                    style: AppTheme.mainTextStyle(
+                        color: AppTheme.neutral100, fontSize: 60.sp),
+                  ).tr(),
+
+                  Text(
+                    " iptv",
+                    style: AppTheme.mainTextStyle(
+                        color: AppTheme.primary, fontSize: 18.sp),
+                  ).tr()
+                ],
               ),
             ),
 
+
+
             Space(
-              height: 3.h,
+              height: 10.h,
             ),
 
             Text(
               LocaleKeys.auth_method_title,
               style: AppTheme.mainTextStyle(
-                color: AppTheme.neutral900,
+                color: AppTheme.neutral300,
                 fontSize: 22.sp,
               ),
             ).tr(),
@@ -74,20 +88,20 @@ class AuthMethodsScreen extends StatelessWidget {
               child: Text(
                 LocaleKeys.auth_method_description,
                 style: AppTheme.mainTextStyle(
-                    color: AppTheme.neutral700, fontSize: 12.sp),
+                    color: AppTheme.neutral500, fontSize: 12.sp),
               ).tr(),
             ),
             Space(
               height: 5.h,
             ),
             MainButton(
-              color: AppTheme.primary900,
+              color: AppTheme.primary,
               width: 86.w,
-              height: 6.5.h,
+              height: 6.h,
               label: Text(
                 LocaleKeys.login,
                 style: AppTheme.mainTextStyle(
-                    color: AppTheme.neutral100, fontSize: 13.sp),
+                    color: AppTheme.neutral100, fontSize: 12.sp),
               ).tr(),
               onTap: ()=> navigateToLoginScreen(context),
             ),
@@ -103,13 +117,13 @@ class AuthMethodsScreen extends StatelessWidget {
             ),
             MainButton(
               width: 86.w,
-              height: 6.5.h,
-              border: Border.all(color: AppTheme.primary900,width: .2.w),
+              height: 6.h,
+              border: Border.all(color: AppTheme.neutral100,width: .2.w),
               color: Colors.transparent,
               label: Text(
-                LocaleKeys.register_buyer,
+                LocaleKeys.register,
                 style: AppTheme.mainTextStyle(
-                    color: AppTheme.primary900, fontSize: 13.sp),
+                    color: AppTheme.neutral100, fontSize: 12.sp),
               ).tr(),
               onTap: ()=> navigateToRegisterCustomerScreen(context),
             ),
@@ -117,35 +131,10 @@ class AuthMethodsScreen extends StatelessWidget {
             Space(
               height:3.h,
             ),
-            MainButton(
-              width: 86.w,
-              height: 6.5.h,
-              border: Border.all(color: AppTheme.primary900,width: 0.2.w),
-              color: Colors.transparent,
-              label: Text(
-                LocaleKeys.register_tailor,
-                style: AppTheme.mainTextStyle(
-                    color: AppTheme.primary900, fontSize: 13.sp),
-              ).tr(),
-              onTap: ()=> navigateToRegisterSellerScreen(context),
-            ),
 
-            Space(
-              height: 3.h,
-            ),
 
-            MainButton(
-              width: 86.w,
-              height: 6.5.h,
-              border: Border.all(color: AppTheme.primary900,width: 0.2.w),
-              color: Colors.transparent,
-              label: Text(
-                LocaleKeys.register_admin,
-                style: AppTheme.mainTextStyle(
-                    color: AppTheme.primary900, fontSize: 13.sp),
-              ).tr(),
-              onTap: ()=> navigateToRegisterAdminScreen(context),
-            ),
+
+
           ],
         ),
       ),

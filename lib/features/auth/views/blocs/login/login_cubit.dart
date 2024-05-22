@@ -3,15 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
 import 'package:smart_soft/core/di/app_module.dart';
 import 'package:smart_soft/core/errors/failure.dart';
-import 'package:smart_soft/features/admin/admin_home/views/screens/admin_home_screen.dart';
 import 'package:smart_soft/features/auth/domain/usecases/get_user_use_case.dart';
 import 'package:smart_soft/features/auth/domain/usecases/login_use_case.dart';
 import 'package:smart_soft/features/auth/utils/register_type.dart';
 import 'package:smart_soft/features/auth/utils/role.dart';
 import 'package:smart_soft/features/auth/views/screens/02_register_screen.dart';
 import 'package:smart_soft/features/auth/views/screens/03_reset_password_screen.dart';
-import 'package:smart_soft/features/home/views/screens/06_home_screen.dart';
-import 'package:smart_soft/features/seller/seller_home/views/screens/seller_home_screen.dart';
+import 'package:smart_soft/features/main/views/main_screen.dart';
+
 
 import '../../../../../core/core_feature/domain/usecases/validate_password_use_case.dart';
 import '../../../../../core/core_feature/domain/usecases/validate_phone_use_case.dart';
@@ -42,9 +41,10 @@ class LoginCubit extends Cubit<LoginState> {
   }
 
   onLoginClick(BuildContext context){
-    if(formKey.currentState!.validate()) {
-      login(context);
-    }
+    // if(formKey.currentState!.validate()) {
+    //   login(context);
+    // }
+    _navigateToMainScreen(context);
   }
 
   onRegisterClick(BuildContext context){
@@ -89,7 +89,7 @@ class LoginCubit extends Cubit<LoginState> {
                   break;
 
                 case Role.customer :
-                  _navigateToHomeScreen(context);
+                  _navigateToMainScreen(context);
                   emit(LoginSuccess());
                   break;
 
@@ -132,23 +132,23 @@ class LoginCubit extends Cubit<LoginState> {
   }
 
   _navigateToRegisterScreen(BuildContext context){
-    Navigator.push(context,MaterialPageRoute(builder: (_)=> RegisterScreen(registerType:  RegisterType.RegisterSeller,)));
+    Navigator.pushReplacement(context,MaterialPageRoute(builder: (_)=> RegisterScreen()));
   }
 
   _navigateToResetPasswordScreen(BuildContext context){
     Navigator.push(context,MaterialPageRoute(builder: (_)=> const ResetPasswordScreen()));
   }
 
-  _navigateToHomeScreen(BuildContext context){
-    Navigator.push(context,MaterialPageRoute(builder: (_)=> const HomeScreen()));
+  _navigateToMainScreen(BuildContext context){
+    Navigator.push(context,MaterialPageRoute(builder: (_)=> const MainScreen()));
   }
 
   _navigateToSellerHomeScreen(BuildContext context){
-    Navigator.push(context,MaterialPageRoute(builder: (_)=> const SellerHomeScreen()));
+   // Navigator.push(context,MaterialPageRoute(builder: (_)=> const SellerHomeScreen()));
   }
 
   _navigateToAdminHomeScreen(BuildContext context){
-    Navigator.push(context,MaterialPageRoute(builder: (_)=> const AdminHomeScreen()));
+    //Navigator.push(context,MaterialPageRoute(builder: (_)=> const AdminHomeScreen()));
   }
 
 }

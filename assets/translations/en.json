@@ -1,11 +1,11 @@
 {
-  "on_boarding_title_1": "Digital Catalog",
-  "on_boarding_title_2": "Home Stories",
-  "on_boarding_title_3": "Simplified Management",
+  "on_boarding_title_1": "Seamless Streaming",
+  "on_boarding_title_2": "Personalized Experience",
+  "on_boarding_title_3": "Easy Navigation",
 
-  "on_boarding_description_1": "Effortlessly organize and document your furniture pieces with this user-friendly digital catalog.",
-  "on_boarding_description_2": "Capture and share the unique stories behind your furniture, turning them into cherished elements of your home's narrative.",
-  "on_boarding_description_3": "Streamline the management of your furniture pieces with this intuitive app, ensuring easy tracking and documentation.",
+  "on_boarding_description_1": "Enjoy high-quality live TV channels and on-demand content at your fingertips. Our advanced streaming technology ensures a smooth and uninterrupted viewing experience, so you never miss a moment of your favorite shows and movies.",
+  "on_boarding_description_2": "Discover content curated just for you! Our app learns your preferences and suggests shows and channels that match your interests. Whether it's sports, news, or entertainment, you'll always find something you love.",
+  "on_boarding_description_3": "Navigate effortlessly through our intuitive interface. Quickly switch between channels, access your watchlist, and explore new content with just a few taps. Enjoy a user-friendly experience designed to make your viewing simple and enjoyable.",
 
   "next": "Next",
   "previous": "Previous",
@@ -121,7 +121,11 @@
   "monthly_income": "Monthly income",
   "welcome_back": "Welcome back",
 
-  "empty_seller_item": "You have no items in this category, try adding at least one item so that the customers can order from you"
+  "empty_seller_item": "You have no items in this category, try adding at least one item so that the customers can order from you",
 
-
+  "movies": "Movies",
+  "tvshows": "TVShows",
+  "search": "Search",
+  "live_tv": "Live TV",
+  "settings": "Settings"
 }

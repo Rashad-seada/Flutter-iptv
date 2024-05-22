@@ -29,7 +29,7 @@ class CustomTextField extends StatefulWidget {
     Key? key,
     this.width,
     this.height,
-    this.borderRadius = const BorderRadius.all(Radius.circular(12)),
+    this.borderRadius = const BorderRadius.all(Radius.circular(8)),
     this.controller,
     this.hint,
     this.label,
@@ -111,17 +111,17 @@ class _CustomTextFieldState extends State<CustomTextField> {
 
           disabledBorder: OutlineInputBorder(
               borderSide:
-                  const BorderSide(color: AppTheme.neutral400, width: 1),
+                  const BorderSide(color: AppTheme.neutral500, width: 1),
               borderRadius: widget.borderRadius),
 
           enabledBorder: OutlineInputBorder(
               borderSide:
-                  const BorderSide(color: AppTheme.neutral300, width: 1),
+                  const BorderSide(color: AppTheme.neutral500, width: 1),
               borderRadius: widget.borderRadius),
 
           focusedBorder: OutlineInputBorder(
               borderSide:
-                  const BorderSide(color: AppTheme.neutral900, width: 1),
+                  const BorderSide(color: AppTheme.neutral100, width: 1),
               borderRadius: widget.borderRadius),
 
           errorBorder: OutlineInputBorder(

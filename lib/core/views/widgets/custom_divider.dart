@@ -15,19 +15,19 @@ class CustomDivider extends StatelessWidget {
         Expanded(
           child: Container(
             height: .2.h,
-            color: AppTheme.neutral200,
+            color: AppTheme.primary,
           ),
         ),
 
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 2.w),
-          child: Text("OR",style: AppTheme.mainTextStyle(),),
+          child: Text("OR",style: AppTheme.mainTextStyle(color: AppTheme.primary),),
         ),
 
         Expanded(
           child: Container(
             height: .2.h,
-            color: AppTheme.neutral200,
+            color: AppTheme.primary,
           ),
         ),
 
