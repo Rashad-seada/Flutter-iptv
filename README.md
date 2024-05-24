@@ -1,4 +1,4 @@
-![alt text](https://github.com/Rashad-seada/Flutter-Starter-Project-with-auth/blob/master/Mockup%204.png?raw=true)
+![alt text](https://github.com/Rashad-seada/Flutter-iptv/blob/master/Mockup%204qs.png?raw=true)
 
 # Flutter Starter Project
 
